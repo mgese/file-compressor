@@ -1,7 +1,7 @@
 {
   "name": "file-compressor",
   "version": "1.0.0",
-  "description": "A package to compress file in TypeScript",
+  "description": "A package to compress files in TypeScript",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -26,5 +26,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@types/node": "^20.10.4",
+    "prettier": "^3.1.0"
   }
 }
