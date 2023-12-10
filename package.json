@@ -27,10 +27,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgese/file-compressor.git"
+    "url": "https://github.com/mgese/file-compressor-ts.git"
   },
-  "homepage": "https://github.com/mgese/file-compressor",
-  "name": "file-compressor",
+  "keywords": [
+    "typescript",
+    "files",
+    "compressor",
+    "file compressor"
+  ],
+  "homepage": "https://github.com/mgese/file-compressor-ts",
+  "name": "file-compressor-ts",
   "author": "Michael Gesenhues",
   "module": "dist/file-compressor.esm.js",
   "size-limit": [
