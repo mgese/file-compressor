@@ -1,32 +1,54 @@
 {
-  "name": "file-compressor",
-  "version": "1.0.0",
-  "description": "A package to compress files in TypeScript",
+  "version": "0.1.0",
+  "license": "MIT",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
+  "engines": {
+    "node": ">=10"
   },
   "scripts": {
-    "build": "tsc"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
-  "author": "Michael Gesenhues",
-  "license": "MIT",
+  "description": "A package to compress files in TypeScript",
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mgese/file-compressor.git"
   },
   "homepage": "https://github.com/mgese/file-compressor",
+  "name": "file-compressor",
+  "author": "Michael Gesenhues",
+  "module": "dist/file-compressor.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/file-compressor.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/file-compressor.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
-    "typescript": "^5.1.6"
-  },
-  "dependencies": {
-    "@types/node": "^20.10.4",
-    "prettier": "^3.1.0"
+    "@size-limit/preset-small-lib": "^11.0.1",
+    "husky": "^8.0.3",
+    "size-limit": "^11.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.2",
+    "typescript": "^3.9.10"
   }
 }
