@@ -1,8 +1,8 @@
-# File Compressor
+# File Compressor Ts
 
 ## Overview
 
-This is a package to compress any file in TypeScript or JavaScript.
+This is a package to compress any file in TypeScript.
 
 
 ## Features
@@ -15,13 +15,13 @@ This is a package to compress any file in TypeScript or JavaScript.
 ## Installation
 
 ```bash
-npm install file-compressor
+npm install file-compressor-ts
 ```
 
 ## Usage
 
 ```typescript
-import {compressFile} from 'file-compressor';
+import {compressFile} from 'file-compressor-ts';
 
 void compressFile({
     inputPath: 'input.txt',
